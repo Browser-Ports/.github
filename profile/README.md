@@ -2,11 +2,13 @@
 
 Browser Ports is an organization dedicated to advancing browser technology and porting it to the web. We dream of a reality where you can have an entire OS on the web and a browser and apps that work well and are sandboxed.
 
-Most of these projects are a long way off from becoming reality.
+> Note: Most of these projects are a long way off from becoming reality!
 
 ## How you can talk to us
 
 [![](https://dcbadge.limes.pink/api/server/2uuGF9b3DH)](https://discord.gg/2uuGF9b3DH)
+
+[On Discord](https://discord.gg/2uuGF9b3DH)
 
 Alternatively, use the bridges:
 
@@ -19,7 +21,7 @@ Hello, my name is Ryan. For the past five years, I've been learning programming 
 
 I am committed to these projects because nobody has made the connection that the same web proxies previously used for unblocking have so much standalone potential. Any idea I explore with Browser Ports leads to many new ideas I never thought of before. I only work on projects for things that have never been made or thought about. This is the most unique sea of projects I can work on.
 
-I was planning on making web OS software that lets you use real desktop apps similar to ChromeOS with cloud syncing as an environment you can take anywhere. [Anura](https://github.com/MercuryWorkshop/anuraOS) fills this gap now, except for the cloud syncing abilities; however, [Puter](https://github.com/HeyPuter/puter) is filling that gap so that I will work on support for their web os on my projects, too (however, not upstream, most likely). I'm working with Anura/MW to port my projects from Browser Ports there. They have a dev team and everything ChromeOS has except for enterprise device/browser policies (which I plan to implement). Android app support is increasingly more relevant because Chrome OS is becoming more like Android.
+I was originally planning on making web OS software that lets you use real desktop apps similar to ChromeOS with cloud syncing as an environment you can take anywhere. [Anura](https://github.com/MercuryWorkshop/anuraOS) fills this gap now, except for the cloud syncing abilities; however, [Puter](https://github.com/HeyPuter/puter) is filling that gap so that I will work on support for their web os on my projects, too (however, not upstream, most likely). I'm working with Anura/MW to port my projects from Browser Ports there. They have a dev team and everything ChromeOS has except for enterprise device/browser policies (which I plan to implement). Android app support is increasingly more relevant because Chrome OS is becoming more like Android.
 
 ## What the future for Browser Ports tech, really (why invest so much time into this)
 
@@ -39,8 +41,11 @@ Browser Ports will also have another significant impact in that the same tech ca
 1. [ ] [FmtErr](https://github.com/Browser-Ports/FmtErr): Some Classes and functions to wrap Runtime validation and Result libraries for TS so that exceptions are handled in a consistent way for Browser Port projects. Not much to worry about.
 2. [ ] [IPC-Proxy](https://github.com/Browser-Ports/IPCProxy): This is important because when you deal with Browser technology, you need to manage and control isolated contexts for things like add-ons, and you can consider IPC Proxy to glue everything together. This is the project that will make handling IPC in the web fun again! IPC Proxy will let you import/export (like modules) any object from any context regardless of what it is using weak references / `FinalizationRegistry`, a ton of listeners and serialized data passed through them that are killed when they aren't needed anymore, and ES6 proxies wrapping all the imports. This will be easy to adapt and have integrations for all sorts of communication types like `postMessage` <-> `addEventListener`, `BroadcastChannel` <-> `BroadcastChannel`, and all of that with extra support for environments such as code sandboxes where you can only interact with I/O as strings (looking at [NodeBox](https://github.com/Sandpack/nodebox-runtime), which mean the data will be able to be serialized to just strings (typically with JSON) and not just any transferrable object for IPC. It will be that flexible. I feel this would become the most complex project in browser ports despite having some of the least LOC. It's great that the complexity would be contained in these abstractions and not be suffered in the other repos.
 3. [ ] [MV3 polyfills for MV2](https://github.com/Browser-Ports/MV2-Polyfills-for-MV3): Exactly what you think it is. I won't disclose how it works until it is ready to release. I'm primarily saving it for when MV2 extensions are fully removed from the Chrome Web Store.
-4. [ ] [StealthBlock](https://github.com/Browser-Ports/StealthBlock): Soon to be the first-of-its-kind undetectable adblocker powered by web sandboxing technologies
+4. [ ] [StealthBlock](https://github.com/Browser-Ports/StealthBlock): Soon to be the first-of-its-kind undetectable adblocker powered by web sandboxing technologies.
    1. [ ] Web Extension implementation
+      1. [ ] Add support for StealthBlock Lite filter lists
+      2. [ ] Add support for StealthBlock filter lists
+      3. [ ] Add support for traditional filter lists
    2. [ ] Userscript Implementation
 5. [ ] The Proxy Middleware demo web extension implementation will make testing Proxy Middleware much easier. For example, you don't need a web proxy, and it will have live-debugging HMR support, making the [Proxy Middleware spec](https://github.com/Browser-Ports/proxy-middleware) much more manageable.
 6. [ ] The first Proxy Middleware repos (like [proxy-middleware-BP](https://github.com/Browser-Ports/proxy-middleware-BP)), a store frontend for installing Proxy Middleware with repo switching support, and the 
